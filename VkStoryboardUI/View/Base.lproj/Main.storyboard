@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +15,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-Wu-43l">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGy-kh-zjo">
+                                        <rect key="frame" x="20.5" y="767" width="373" height="31"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="applelogo" catalog="system" imagePlacement="leading" title="Вход с Apple">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.082352943720000002" green="0.082352943720000002" blue="0.086274504660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email или телефон" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2OQ-rz-kGp">
+                                        <rect key="frame" x="20.5" y="392" width="373" height="34"/>
+                                        <color key="backgroundColor" red="0.23240214646464652" green="0.23240214646464652" blue="0.23240214646464652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.36470589040000001" green="0.36470589040000001" blue="0.36470589040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Пароль" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eak-ES-5xy">
+                                        <rect key="frame" x="20.5" y="426" width="373" height="34"/>
+                                        <color key="backgroundColor" red="0.23240214646464652" green="0.23240214646464652" blue="0.23240214646464652" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.38506155303030298" green="0.38506155303030298" blue="0.38506155303030298" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGs-3d-dRl">
+                                        <rect key="frame" x="20.5" y="477" width="373" height="31"/>
+                                        <color key="tintColor" red="0.098039209840000002" green="0.098039209840000002" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Войти">
+                                            <color key="baseForegroundColor" red="0.098039209840000002" green="0.098039209840000002" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.33430003156565657" green="0.33430003156565657" blue="0.33430003156565657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lg7-4J-RYJ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yS4-8p-RNO">
+                                        <rect key="frame" x="82" y="22" width="250" height="300"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yS4-8p-RNO" firstAttribute="leading" secondItem="oFa-MI-Inw" secondAttribute="leading" constant="82" id="3HX-Ap-o0Z"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="centerY" secondItem="jZd-Wu-43l" secondAttribute="centerY" id="Hd5-L5-0nE"/>
+                                    <constraint firstItem="tGy-kh-zjo" firstAttribute="width" secondItem="jZd-Wu-43l" secondAttribute="width" multiplier="0.9" id="IAs-3f-TZY"/>
+                                    <constraint firstItem="tGy-kh-zjo" firstAttribute="centerX" secondItem="jZd-Wu-43l" secondAttribute="centerX" id="Iua-kA-093"/>
+                                    <constraint firstItem="eak-ES-5xy" firstAttribute="top" secondItem="jZd-Wu-43l" secondAttribute="bottom" constant="-392" id="LF5-iG-lVf"/>
+                                    <constraint firstItem="yS4-8p-RNO" firstAttribute="top" secondItem="oFa-MI-Inw" secondAttribute="top" constant="22" id="Mdx-3T-adw"/>
+                                    <constraint firstItem="tGy-kh-zjo" firstAttribute="top" secondItem="jZd-Wu-43l" secondAttribute="bottom" constant="-51" id="OF0-t1-OKd"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="top" secondItem="jZd-Wu-43l" secondAttribute="bottom" constant="-426" id="TFn-a7-gea"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="width" secondItem="jZd-Wu-43l" secondAttribute="width" multiplier="0.9" id="XXH-6E-Z9c"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="top" secondItem="jZd-Wu-43l" secondAttribute="bottom" constant="-426" id="emU-GU-Vwq"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="centerX" secondItem="jZd-Wu-43l" secondAttribute="centerX" id="fV7-Vf-zGi"/>
+                                    <constraint firstItem="eak-ES-5xy" firstAttribute="centerX" secondItem="jZd-Wu-43l" secondAttribute="centerX" id="gL5-Zy-ENJ"/>
+                                    <constraint firstItem="2OQ-rz-kGp" firstAttribute="top" secondItem="yS4-8p-RNO" secondAttribute="bottom" constant="70" id="iRV-E8-GLL"/>
+                                    <constraint firstItem="WGs-3d-dRl" firstAttribute="width" secondItem="jZd-Wu-43l" secondAttribute="width" multiplier="0.9" id="igb-Sr-mse"/>
+                                    <constraint firstAttribute="trailing" secondItem="2OQ-rz-kGp" secondAttribute="trailing" constant="20.5" id="kvS-oq-XP8"/>
+                                    <constraint firstItem="eak-ES-5xy" firstAttribute="top" secondItem="2OQ-rz-kGp" secondAttribute="bottom" id="lkX-KN-u27"/>
+                                    <constraint firstItem="yS4-8p-RNO" firstAttribute="centerX" secondItem="2OQ-rz-kGp" secondAttribute="centerX" id="npg-xZ-pmn"/>
+                                    <constraint firstItem="WGs-3d-dRl" firstAttribute="centerX" secondItem="jZd-Wu-43l" secondAttribute="centerX" id="oSj-Y7-Ig1"/>
+                                    <constraint firstItem="WGs-3d-dRl" firstAttribute="top" secondItem="jZd-Wu-43l" secondAttribute="bottom" constant="-341" id="vJz-M4-X6d"/>
+                                    <constraint firstItem="eak-ES-5xy" firstAttribute="width" secondItem="jZd-Wu-43l" secondAttribute="width" multiplier="0.9" id="wHz-so-PxZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ygo-xR-Job"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oFa-MI-Inw"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.098039209840000002" green="0.098039209840000002" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jZd-Wu-43l" secondAttribute="bottom" id="Fkc-9l-V1W"/>
+                            <constraint firstItem="jZd-Wu-43l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LE6-Ak-NuK"/>
+                            <constraint firstItem="jZd-Wu-43l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TOA-9I-mfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZd-Wu-43l" secondAttribute="trailing" id="TUh-YI-0U9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordLogin" destination="eak-ES-5xy" id="sPr-MN-3wZ"/>
+                        <outlet property="scrollView" destination="jZd-Wu-43l" id="HY7-wm-O5A"/>
+                        <outlet property="usernameLogin" destination="2OQ-rz-kGp" id="raU-Qy-qjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <image name="logo" width="337" height="432"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
