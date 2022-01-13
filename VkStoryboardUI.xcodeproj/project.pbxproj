@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0BA9602773DDFD00DA2824 /* MyFriendTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BA95F2773DDFD00DA2824 /* MyFriendTableVC.swift */; };
+		1F0BA9622773DE7900DA2824 /* MyGroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BA9612773DE7900DA2824 /* MyGroupsTableVC.swift */; };
+		1F0BA9642773DEF000DA2824 /* AllGroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BA9632773DEF000DA2824 /* AllGroupsTableVC.swift */; };
+		1F0BA9662773DF4400DA2824 /* FriedCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BA9652773DF4400DA2824 /* FriedCollectionVC.swift */; };
 		1FE43342276A8E4F0022CEDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE43341276A8E4F0022CEDB /* AppDelegate.swift */; };
 		1FE43344276A8E4F0022CEDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE43343276A8E4F0022CEDB /* SceneDelegate.swift */; };
 		1FE43346276A8E4F0022CEDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE43345276A8E4F0022CEDB /* LoginViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0BA95F2773DDFD00DA2824 /* MyFriendTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendTableVC.swift; sourceTree = "<group>"; };
+		1F0BA9612773DE7900DA2824 /* MyGroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableVC.swift; sourceTree = "<group>"; };
+		1F0BA9632773DEF000DA2824 /* AllGroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableVC.swift; sourceTree = "<group>"; };
+		1F0BA9652773DF4400DA2824 /* FriedCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriedCollectionVC.swift; sourceTree = "<group>"; };
 		1FE4333E276A8E4F0022CEDB /* VkStoryboardUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkStoryboardUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE43341276A8E4F0022CEDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FE43343276A8E4F0022CEDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				1FE43345276A8E4F0022CEDB /* LoginViewController.swift */,
+				1F0BA95F2773DDFD00DA2824 /* MyFriendTableVC.swift */,
+				1F0BA9652773DF4400DA2824 /* FriedCollectionVC.swift */,
+				1F0BA9612773DE7900DA2824 /* MyGroupsTableVC.swift */,
+				1F0BA9632773DEF000DA2824 /* AllGroupsTableVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -164,7 +176,11 @@
 			files = (
 				1FE43346276A8E4F0022CEDB /* LoginViewController.swift in Sources */,
 				1FE43342276A8E4F0022CEDB /* AppDelegate.swift in Sources */,
+				1F0BA9622773DE7900DA2824 /* MyGroupsTableVC.swift in Sources */,
 				1FE43344276A8E4F0022CEDB /* SceneDelegate.swift in Sources */,
+				1F0BA9602773DDFD00DA2824 /* MyFriendTableVC.swift in Sources */,
+				1F0BA9642773DEF000DA2824 /* AllGroupsTableVC.swift in Sources */,
+				1F0BA9662773DF4400DA2824 /* FriedCollectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

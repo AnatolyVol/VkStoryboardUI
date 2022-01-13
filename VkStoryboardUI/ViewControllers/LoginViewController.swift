@@ -24,21 +24,12 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        
-        // Получаем текст логина
-                let login = usernameLogin.text!
-                // Получаем текст-пароль
-                let password = passwordLogin.text!
-                
-                // Проверяем, верны ли они
-                if login == "admin" && password == "admin" {
-                    print("успешная авторизация")
-                } else {
-                    print("неуспешная авторизация")
-                }
-
+       
     }
     
+    
+    
+    //скрытие клавиатуры
     @objc func hideKeyboard() {
             self.scrollView?.endEditing(true)
         }
@@ -63,7 +54,9 @@ class LoginViewController: UIViewController {
             let contentInsets = UIEdgeInsets.zero
             scrollView?.contentInset = contentInsets
         }
-
+    
+    
+    //Что-то с уведомлениеями
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             
@@ -78,5 +71,46 @@ class LoginViewController: UIViewController {
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         }
+    
+    //Проверка валидности логина и пароля для перехода на следующий экран
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        switch identifier {
+        case "goToMain":
+            if !checkUser() {
+            presentAlert()
+            return false
+            } else {
+            clearDate()
+            return true
+        }
+        default:
+            return false
+        }
+    }
+    
+    //MARK: private methods
+    private func checkUser() -> Bool {
+        usernameLogin.text == "admin" && passwordLogin.text == "admin"
+    }
+    
+    //Ошибка при не валидных логине/пароле
+    private func presentAlert() {
+        let alertController = UIAlertController(
+            title: "Error",
+            message: "Incorect Username or password",
+            preferredStyle: .alert)
+        let action = UIAlertAction(
+            title: "Close",
+            style: .cancel,
+            handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
+    
+    //Очистка данных
+    private func clearDate() {
+        usernameLogin.text = ""
+        passwordLogin.text = ""
+    }
 }
 
